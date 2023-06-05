@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <title>dnoetz</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Condensed&family=Staatliches&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "layouts/navbar" %>
+
+    <main class="mt-[10vh]">
+      <%= yield %>
+    </main>
+
+    <%= render "layouts/socials" %>
+  </body>
+
+</html>
